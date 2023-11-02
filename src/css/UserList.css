@@ -1,0 +1,36 @@
+
+.user-list {
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 8%;
+    bottom: 0;
+    overflow-y: auto;
+    text-align: center;
+    background-color: #FF72B5;
+  }
+  
+  .user-list h2 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .user-list .list-group-item {
+    cursor: pointer;
+  }
+  
+  .user-list .list-group-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .user-list .list-group-item:nth-child(odd) {
+    background-color: #FF8890;
+  }
+  
+  .user-list .list-group-item:nth-child(even) {
+    background-color: #FFAB70;
+  }
+  
+  

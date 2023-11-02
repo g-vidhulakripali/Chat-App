@@ -1,0 +1,15 @@
+/* Navbar.css */
+.navbar {
+    background-color: #da70d6 !important;
+    padding-left: 2rem;
+  }
+  
+  .text-white {
+    color: white !important;
+  }
+  
+
+  .navbar-right{
+    margin-left: 80%;
+  }
+    
