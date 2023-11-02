@@ -124,13 +124,17 @@ router.get("/profile/:userId", async (req, res) => {
 
 router.get("/users", async (req, res) => {
   try {
+    // Fetch all users
     const user = await User.find({});
     if (!user) {
+      // User not found, return 404
       return res.status(404).json({ message: "User not found" });
     }
+    // Return all users as JSON
     res.json(user);
   } catch (error) {
     console.error(error);
+    // Internal server error, return 500
     res.status(500).json({ message: "Internal Server Error" });
   }
 });

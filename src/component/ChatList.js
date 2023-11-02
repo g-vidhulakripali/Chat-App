@@ -36,18 +36,6 @@ const UserList = ({ userId, onStartChat }) => {
           ))}
       </ListGroup>
     </div>
-    // <div>
-    //   <h2>User List</h2>
-    //   <ul>
-    //     {users
-    //       .filter((user) => user._id !== userId.userId)
-    //       .map((user) => (
-    //         <li key={user._id} onClick={() => onStartChat(user._id)}>
-    //           {user.fullname}
-    //         </li>
-    //       ))}
-    //   </ul>
-    // </div>
   );
 };
 

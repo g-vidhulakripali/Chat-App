@@ -21,19 +21,8 @@ import Header from "./component/Header";
 import NotFound from "./component/NotFound";
 function App() {
   const [userId, setUserId] = useState(null);
-  // useEffect(() => {
-  //   // Fetch user profile data when the component mounts
-  //   axios
-  //     .get("http://localhost:3001/auth/profile/:userId")
-  //     .then((response) => console.log(response))
-  //     .catch((error) => console.error("Error fetching user profile", error));
-  // }, []);
   return (
     <div className="App">
-      {/* Your main application component */}
-      {/* <h1>Hello, Chat App!</h1> */}
-      {/* <Login /> */}
-      {/* <Register /> */}
       <Router>
         <div>
           <Header userId={userId} setUserId={setUserId} />
@@ -51,12 +40,6 @@ function App() {
         </div>
       </Router>
       <Footer />
-      {/* <Router>
-        <Routes>
-          <Route path="/" component={<Login />} />
-          <Route path="/register" component={Register} />
-        </Routes>
-      </Router> */}
     </div>
   );
 }

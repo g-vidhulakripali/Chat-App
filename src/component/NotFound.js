@@ -4,6 +4,7 @@ import NotFoundImage from "../images/how-to-find-and-fix-404-errors-in-wordpress
 const NotFound = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Wrong URL</h2>
       <img
         src={NotFoundImage}
         alt="404 Not Found"

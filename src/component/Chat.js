@@ -1,5 +1,3 @@
-// import React from "react";
-// import axios from "axios";
 import React, { useState } from "react";
 import ChatRoom from "./ChatRoom";
 import ChatList from "./ChatList";

@@ -1,4 +1,3 @@
-// components/Chat.js
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -6,8 +5,6 @@ const ChatRoom = ({ userId, otherUserId }) => {
   const [sendmessages, setMessages] = useState([]);
   const [receivedmessages, setReceiveMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  // const [userNameS, setSUserName] = useState("");
-  // const [userNameR, setRUserName] = useState("");
   const [fullnameR, setRFullName] = useState("");
 
   const fetchMessages = useCallback(async () => {
@@ -109,69 +106,6 @@ const ChatRoom = ({ userId, otherUserId }) => {
         </div>
       </div>
     </div>
-
-    // <div className="chat">
-    //   {/* <h2>Chat with User</h2> */}
-    //   <h2> Chating with {fullnameR} </h2>
-    //   <ListGroup>
-    //     {sendmessages.map((message) => (
-    //       <ListGroup.Item key={message._id} className="sent-message">
-    //         {message.text}
-    //       </ListGroup.Item>
-    //     ))}
-    //     {receivedmessages.map((message) => (
-    //       <ListGroup.Item key={message._id} className="received-message">
-    //         {message.text}
-    //       </ListGroup.Item>
-    //     ))}
-    //   </ListGroup>
-    //   <div className="input-group mb-3">
-    //     <input
-    //       type="text"
-    //       className="form-control"
-    //       placeholder="Type a message"
-    //       value={newMessage}
-    //       onChange={(e) => setNewMessage(e.target.value)}
-    //     />
-    //     <div className="input-group-append">
-    //       <button
-    //         className="btn btn-outline-secondary"
-    //         type="button"
-    //         onClick={sendMessage}
-    //       >
-    //         Send
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-    // <div>
-    //   <h2>Chat with User</h2>
-    //   <div>
-    //     {sendmessages.map((message) => (
-    //       <div key={message._id}>
-    //         Sender: {message.sender}: {message.text}
-    //         Receiver: {message.receiver}
-    //       </div>
-    //     ))}
-    //   </div>
-    //   Receive
-    //   <div>
-    //     {receivedmessages.map((message) => (
-    //       <div key={message._id}>
-    //         Sender: {message.sender}: {message.text}
-    //         Receiver: {message.receiver}
-    //       </div>
-    //     ))}
-    //   </div>
-    //   <div>
-    //     <input
-    //       type="text"
-    //       value={newMessage}
-    //       onChange={(e) => setNewMessage(e.target.value)}
-    //     />
-    //     <button onClick={sendMessage}>Send</button>
-    //   </div>
-    // </div>
   );
 };
 

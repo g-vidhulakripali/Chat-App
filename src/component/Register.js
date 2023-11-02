@@ -81,22 +81,6 @@ const Register = () => {
         </div>
       </div>
     </div>
-    // <div>
-    //   <h2>Register</h2>
-    //   <div>
-    //     <label>Full Name:</label>
-    //     <input type="text" name="fullname" onChange={handleInputChange} />
-    //   </div>
-    //   <div>
-    //     <label>Username:</label>
-    //     <input type="text" name="username" onChange={handleInputChange} />
-    //   </div>
-    //   <div>
-    //     <label>Password:</label>
-    //     <input type="password" name="password" onChange={handleInputChange} />
-    //   </div>
-    //   <button onClick={handleRegister}>Register</button>
-    // </div>
   );
 };
 
