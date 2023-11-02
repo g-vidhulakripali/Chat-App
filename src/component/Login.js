@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { API_URLS } from "../config/config";
 
 const Login = ({ setUserId }) => {
   const navigate = useNavigate();
@@ -19,10 +20,7 @@ const Login = ({ setUserId }) => {
   const handleLogin = async () => {
     console.log("clicked?");
     try {
-      const response = await axios.post(
-        "http://localhost:3001/auth/login",
-        loginData
-      );
+      const response = await axios.post(API_URLS.AUTH + "/login", loginData);
       setLoginError(false);
       console.log("Login successful", response.data);
       setUserId(response.data.userId);

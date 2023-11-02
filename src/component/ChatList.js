@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ListGroup from "react-bootstrap/ListGroup";
+import { API_URLS } from "../config/config";
 
 const UserList = ({ userId, onStartChat }) => {
   const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ const UserList = ({ userId, onStartChat }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/auth/users");
+      const response = await axios.get(API_URLS.USERS);
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users", error);

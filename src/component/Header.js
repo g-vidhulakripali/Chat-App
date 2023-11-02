@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_URLS } from "../config/config";
 
 const Header = ({ userId, setUserId }) => {
   const [fullName, setFullName] = useState("");
@@ -11,7 +12,7 @@ const Header = ({ userId, setUserId }) => {
     // Fetch user full name from /auth/profile/:userId
     if (userId) {
       axios
-        .get(`http://localhost:3001/auth/profile/${userId}`)
+        .get(API_URLS.PROFILE + `/${userId}`)
         .then((response) => setFullName(response.data.fullname))
         .catch((error) => console.error("Error fetching user profile", error));
     }

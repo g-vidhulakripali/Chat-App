@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import ListGroup from "react-bootstrap/ListGroup";
+import { API_URLS } from "../config/config";
+
 const ChatRoom = ({ userId, otherUserId }) => {
   const [sendmessages, setMessages] = useState([]);
   const [receivedmessages, setReceiveMessages] = useState([]);
@@ -11,12 +13,11 @@ const ChatRoom = ({ userId, otherUserId }) => {
     try {
       if (userId && otherUserId) {
         const responseSent = await axios.get(
-          `http://localhost:3001/messages/${userId.userId}/${otherUserId}`
+          API_URLS.MESSAGES + `/${userId.userId}/${otherUserId}`
         );
         const responseReceive = await axios.get(
-          `http://localhost:3001/messages/${otherUserId}/${userId.userId}`
+          API_URLS.MESSAGES + `/${otherUserId}/${userId.userId}`
         );
-        console.log(responseReceive, "Messahdieiyireuio ");
         setMessages(responseSent.data);
         setReceiveMessages(responseReceive.data);
       }
@@ -36,7 +37,7 @@ const ChatRoom = ({ userId, otherUserId }) => {
       //   })
       //   .catch((error) => console.error("Error fetching user profile", error));
       axios
-        .get(`http://localhost:3001/auth/profile/${otherUserId}`)
+        .get(API_URLS.PROFILE + `/${otherUserId}`)
         .then((response) => {
           // setSFullName(response.data.fullname);
           setRFullName(response.data.fullname);
@@ -54,7 +55,7 @@ const ChatRoom = ({ userId, otherUserId }) => {
     try {
       // Send a new message
       console.log(userId.userId, otherUserId, newMessage);
-      await axios.post("http://localhost:3001/messages/send", {
+      await axios.post(API_URLS.MESSAGES + "/send", {
         sender: userId.userId,
         receiver: otherUserId,
         text: newMessage,
