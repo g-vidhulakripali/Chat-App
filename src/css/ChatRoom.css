@@ -1,0 +1,55 @@
+.chat {
+    width: 75%;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    bottom: 0;
+    overflow-y: auto;
+    padding-left: 5%;
+  }
+  
+  .chat h2 {
+    text-align: center;
+    color: #FFAB70;
+    font-family: fantasy;
+  }
+  
+  .chat .list-group-item {
+    border-radius: 20px;
+  }
+  
+  .chat .sent-message {
+    background-color: #FF72B5;
+    text-align: center;
+    width: 30%;
+    margin-left: 60%;
+  }
+  
+  .chat .received-message {
+    background-color: #DA70D6;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .chat form {
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+  }
+  
+  .chat form .form-control {
+    width: calc(100% - 60px);
+  }
+  
+  .chat form .btn {
+    position: absolute;
+    right: 0;
+  }
+
+  .input-group{
+    position: fixed;
+    bottom: 10%;
+    left: 35%;
+    width: 50%;
+  }
+  
